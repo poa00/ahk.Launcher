@@ -36,7 +36,8 @@ gui_autoexecute:
 ;-------------------------------------------------------------------------------
 ; LAUNCH GUI
 ;-------------------------------------------------------------------------------
-CapsLock & Space::
+CapsLock & Shift::
+Shift & CapsLock::
 gui_spawn:
     if gui_state != closed
     {
