@@ -17,6 +17,8 @@ SetCapsLockState, AlwaysOff
 ; executed below.
 ;-------------------------------------------------------
 Gosub, gui_autoexecute
+
+Menu, Tray, Icon, %A_ScriptDir%\GUI\Icon.ico ; schmimae: Change systray icon
 ;-------------------------------------------------------
 ; END AUTO EXECUTE SECTION
 return
