@@ -119,6 +119,12 @@ else if Pedersen = mes ; Opens Facebook unread messages
     gui_destroy()
     run https://www.facebook.com/messages?filter=unread&action=recent-messages
 }
+Else If Pedersen = dest ; Google Maps destination
+{
+    gui_search_title := "Directions on Google Maps"
+    gui_search("https://www.google.de/maps/dir/REPLACEME")
+}
+
 else if Pedersen = url ; Open an URL from the clipboard (naive - will try to run whatever is in the clipboard)
 {
     gui_destroy()
