@@ -54,7 +54,7 @@ gui_spawn:
     Gui, Font, s11, Segoe UI
     Gui, Add, Text, %gui_control_options% vgui_main_title, ¯\_(ツ)_/¯
     Gui, Font, s10, Segoe UI
-    Gui, Add, Edit, %gui_control_options% vPedersen gFindus
+    Gui, Add, Edit, %gui_control_options% vCommand gFindus
     Gui, Show,, myGUI
     return
 
@@ -119,7 +119,7 @@ gui_search_add_elements:
     Gui, Add, Text, %gui_control_options% %cYellow%, %gui_search_title%
     Gui, Add, Edit, %gui_control_options% %cYellow% vgui_SearchEdit -WantReturn
     Gui, Add, Button, x-10 y-10 w1 h1 +default ggui_SearchEnter ; hidden button
-    GuiControl, Disable, Pedersen
+    GuiControl, Disable, Command
     Gui, Show, AutoSize
     return
 
@@ -173,12 +173,12 @@ gui_commandlibrary:
     StringCaseSense, Off ; Matching to both if/If in the IfInString command below
     Loop, read, %A_ScriptDir%/GUI/UserCommands.ahk
     {
-        ; search for the string If Pedersen =, but search for each word individually because spacing between words might not be consistent. (might be improved with regex)
+        ; search for the string If Command =, but search for each word individually because spacing between words might not be consistent. (might be improved with regex)
         If Substr(A_LoopReadLine, 1, 1) != ";" ; Do not display commented commands
         {
             If A_LoopReadLine contains if
             {
-                IfInString, A_LoopReadLine, Pedersen
+                IfInString, A_LoopReadLine, Command
                     IfInString, A_LoopReadLine, =
                     {
                         StringGetPos, setpos, A_LoopReadLine,=
