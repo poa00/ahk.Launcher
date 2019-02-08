@@ -17,6 +17,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Gosub, gui_autoexecute
 
 Menu, Tray, Icon, %A_ScriptDir%\GUI\Icon.ico ; schmimae: Change systray icon
+
+;-------------------------------------------------
+; reload this script
+~CapsLock & F5::
+    SetCapsLockState Off
+    Reload
+Return
+
 ;-------------------------------------------------------
 ; END AUTO EXECUTE SECTION
 return
