@@ -68,15 +68,15 @@ else if Command = mail ; Open gmail
     run "https://gmail.com"
     run "https://mail.tbp.land"
 }
-else if Command = mes ; Opens Facebook unread messages
+else if Command = fbmes ; Opens Facebook unread messages
 {
     gui_destroy()
-    run https://www.facebook.com/messages?filter=unread&action=recent-messages
+    run https://messenger.com
 }
 Else If Command = dest ; Google Maps destination
 {
     gui_search_title := "Directions on Google Maps"
-    gui_search("https://www.google.de/maps/dir/REPLACEME")
+    gui_search("https://www.google.com/maps/dir/REPLACEME")
 }
 
 else if Command = url ; Open an URL from the clipboard (naive - will try to run whatever is in the clipboard)
