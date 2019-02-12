@@ -20,10 +20,9 @@ Menu, Tray, Icon, %A_ScriptDir%\GUI\Icon.ico ; schmimae: Change systray icon
 
 ;-------------------------------------------------
 ; reload this script
-~CapsLock & F5::
-    SetCapsLockState Off
-    Reload
-Return
+#If GetKeyState("CapsLock", "P")
+~F5::Reload
+#If
 
 ;-------------------------------------------------------
 ; END AUTO EXECUTE SECTION
