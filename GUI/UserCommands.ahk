@@ -92,6 +92,11 @@ else if Command = morning ; Morning routine
     run "https://meta.discourse.org/"
     run "https://github.com/"
 }
+else if Command = skype
+{
+    gui_destroy()
+    run "https://preview.web.skype.com/"
+}
 else if Command = start ; Open user Startup folder
 {
     gui_destroy()
