@@ -47,7 +47,11 @@ else if Command = t%A_Space% ; Search torrent networks
     gui_search_title = Sharing is caring
     gui_search("https://kickass.to/usearch/REPLACEME")
 }
-
+else if Command = urba%A_Space% ; Search urbandictionary
+{
+    gui_search_title := "The dictionary which knows everything"
+    gui_search("https://www.urbandictionary.com/define.php?term=REPLACEME")
+}
 
 ;-------------------------------------------------------------------------------
 ;;; LAUNCH WEBSITES AND PROGRAMS ;;;
