@@ -7,8 +7,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance, force
 #MaxHotkeysPerInterval 500
 #WinActivateForce
-DetectHiddenWindows, On
-SetTitleMatchMode, 2
 
 ;-------------------------------------------------------
 ; AUTO EXECUTE SECTION FOR INCLUDED SCRIPTS
@@ -42,6 +40,9 @@ return
 ; That wParam is what ahk interprets are "Reload"
 CapsLock & F5::
 ReloadAllAhkScripts() {
+    DetectHiddenWindows, On
+    SetTitleMatchMode, 2
+
     thisScriptsHWND := WinExist("Ahk_PID " DllCall("GetCurrentProcessId"))
     allAhkExe := []
     WinGet, allAhkExe, List, ahk_class AutoHotkey
