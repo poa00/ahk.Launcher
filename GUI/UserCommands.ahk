@@ -153,7 +153,18 @@ else if Command = phone ; My phone number
 else if Command = logo ; ¯\_(ツ)_/¯
 {
     gui_destroy()
-    Send ¯\_(ツ)_/¯
+    SendRaw ¯\_(ツ)_/¯
+}
+else if Command = loser ; you're a loser now
+{
+    gui_destroy()
+    a =
+    (LTrim
+        just wanna point out that according to tidbit you are officially a loser now:
+        https://discordapp.com/channels/115993023636176902/115993023636176902/537059851021451274
+        congratulations @OP!
+    )
+    SendRaw % a
 }
 else if Command = clip ; Paste clipboard content without formatting
 {
