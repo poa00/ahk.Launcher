@@ -36,7 +36,13 @@ else if Command = xxx%A_Space% ; Search Google as Incognito
     gui_search_title = Google Search as Incognito
     gui_search("C:\Program Files (x86)\Google\Chrome\Application\chrome.exe -incognito https://www.google.com/search?safe=off&q=REPLACEME")
 }
-
+; Ref: https://duckduckgo.com/params
+else if Command = xxxd%A_Space% ; Search DuckDuckGo as Incognito
+{
+    gui_search_title = DuckDuckGo Search as Incognito
+    link := "https://duckduckgo.com/?q=REPLACEME&kp=-2&kaj=m&kam=google-maps&kc=1&kav=1&kh=1"
+    gui_search("C:\Program Files (x86)\Google\Chrome\Application\chrome.exe -incognito " . link)
+}
 else if Command = y%A_Space% ; Search Youtube
 {
     gui_search_title = Search Youtube
