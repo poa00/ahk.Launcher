@@ -86,7 +86,7 @@ Else If Command = dest ; Google Maps destination
 else if Command = url ; Open an URL from the clipboard (naive - will try to run whatever is in the clipboard)
 {
     gui_destroy()
-    run %ClipBoard%
+    run % Trim(ClipBoard)
 }
 else if Command = morning ; Morning routine
 {
