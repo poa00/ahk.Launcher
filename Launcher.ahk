@@ -43,13 +43,11 @@ ReloadAllAhkScripts() {
     DetectHiddenWindows, On
     SetTitleMatchMode, 2
 
-    thisScriptsHWND := WinExist("Ahk_PID " DllCall("GetCurrentProcessId"))
-    allAhkExe := []
     WinGet, allAhkExe, List, ahk_class AutoHotkey
     Loop, % allAhkExe {
         hwnd := allAhkExe%A_Index%
 
-        if (hwnd = thisScriptsHWND)  ; ignore the current window for reloading
+        if (hwnd = A_ScriptHwnd)  ; ignore the current window for reloading
         {
             continue
         }
