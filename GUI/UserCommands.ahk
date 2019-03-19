@@ -116,20 +116,10 @@ else if Command = start ; Open user Startup folder
 ;-------------------------------------------------------------------------------
 ;;; INTERACT WITH THIS AHK SCRIPT ;;;
 ;-------------------------------------------------------------------------------
-else if Command = rel ; Reload this script
-{
-    gui_destroy() ; removes the GUI even when the reload fails
-    Reload
-}
 else if Command = dir ; Open the directory for this script
 {
     gui_destroy()
     Run, %A_ScriptDir%
-}
-else if Command = host ; Edit host script
-{
-    gui_destroy()
-    run, %st% "%A_ScriptFullPath%", , Max
 }
 else if Command = user ; Edit GUI user commands
 {
@@ -141,21 +131,6 @@ else if Command = user ; Edit GUI user commands
 ;-------------------------------------------------------------------------------
 ;;; TYPE RAW TEXT ;;;
 ;-------------------------------------------------------------------------------
-else if Command = @ ; Email address
-{
-    gui_destroy()
-    Send, my_email_address@gmail.com
-}
-else if Command = name ; My name
-{
-    gui_destroy()
-    Send, My Full Name
-}
-else if Command = phone ; My phone number
-{
-    gui_destroy()
-    SendRaw, +45-12345678
-}
 else if Command = logo ; ¯\_(ツ)_/¯
 {
     gui_destroy()
@@ -172,13 +147,6 @@ else if Command = loser ; you're a loser now
     )
     SendRaw % a
 }
-else if Command = clip ; Paste clipboard content without formatting
-{
-    gui_destroy()
-    SendRaw, %ClipBoard%
-}
-
-
 ;-------------------------------------------------------------------------------
 ;;; OPEN FOLDERS ;;;
 ;-------------------------------------------------------------------------------
@@ -187,18 +155,11 @@ else if Command = down ; Downloads
     gui_destroy()
     run C:\Users\%A_Username%\Downloads
 }
-else if Command = drop ; Dropbox folder (works when it is in the default directory)
-{
-    gui_destroy()
-    run, C:\Users\%A_Username%\Dropbox\
-}
 else if Command = rec ; Recycle Bin
 {
     gui_destroy()
     Run ::{645FF040-5081-101B-9F08-00AA002F954E}
 }
-
-
 ;-------------------------------------------------------------------------------
 ;;; MISCELLANEOUS ;;;
 ;-------------------------------------------------------------------------------
@@ -213,17 +174,6 @@ else if Command = date ; What is the date?
     FormatTime, date,, LongDate
     MsgBox %date%
     date =
-}
-else if Command = week ; Which week is it?
-{
-    gui_destroy()
-    FormatTime, weeknumber,, YWeek
-    StringTrimLeft, weeknumbertrimmed, weeknumber, 4
-    if (weeknumbertrimmed = 53)
-        weeknumbertrimmed := 1
-    MsgBox It is currently week %weeknumbertrimmed%
-    weeknumber =
-    weeknumbertrimmed =
 }
 else if Command = ? ; Tooltip with list of commands
 {
