@@ -102,6 +102,12 @@ else if Command = morning ; Morning routine
     run "https://meta.discourse.org/"
     run "https://github.com/"
 }
+else if Command = discord ; Discord
+{
+    gui_destroy()
+    run "https://discordapp.com/channels/115993023636176902/439705591200481280"
+    run "https://discordapp.com/channels/115993023636176902/115993023636176902"
+}
 else if Command = skype
 {
     gui_destroy()
