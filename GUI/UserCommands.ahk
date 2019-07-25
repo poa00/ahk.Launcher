@@ -161,6 +161,11 @@ else if Command = down ; Downloads
     gui_destroy()
     run C:\Users\%A_Username%\Downloads
 }
+else if Command = ss ; Screenshots folder
+{
+    gui_destroy()
+    run C:\all\ShareX-portable\ShareX\Screenshots
+}
 else if Command = rec ; Recycle Bin
 {
     gui_destroy()
