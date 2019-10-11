@@ -118,6 +118,11 @@ else if Command = start ; Open user Startup folder
     gui_destroy()
     run "shell:startup"
 }
+else if Command = tias ; Try It And See
+{
+    gui_destroy()
+    SendRaw % "[TIAS](https://i.imgur.com/6A6tcD0.png)"
+}
 
 ;-------------------------------------------------------------------------------
 ;;; INTERACT WITH THIS AHK SCRIPT ;;;
