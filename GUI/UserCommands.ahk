@@ -121,7 +121,12 @@ else if Command = start ; Open user Startup folder
 else if Command = tias ; Try It And See
 {
     gui_destroy()
-    SendRaw % "[TIAS](https://i.imgur.com/6A6tcD0.png)"
+    SendRaw % "[TIAS](https://discourse.tbp.land/uploads/default/original/1X/e741730b2b41b7ecd3672f986951038ca43af531.jpeg)"
+}
+else if Command = ks
+{
+    gui_destroy()
+    run  taskkill /f /IM Skype*
 }
 
 ;-------------------------------------------------------------------------------
