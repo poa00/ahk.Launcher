@@ -156,7 +156,7 @@ else if Command = user ; Edit GUI user commands
 else if Command = logo ; ¯\_(ツ)_/¯
 {
     gui_destroy()
-    SendRaw ¯\_(ツ)_/¯
+    SendRaw % "``¯\_(ツ)_/¯``"
 }
 else if Command = loser ; you're a loser now
 {
