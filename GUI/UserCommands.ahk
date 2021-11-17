@@ -169,14 +169,19 @@ else if Command = loser ; you're a loser now
     )
     SendRaw % a
 }
+else if Command = english ; MOTHERFUCKER, DO YOU SPEAK IT?
+{
+    gui_destroy()
+    SendRaw % "https://www.youtube.com/watch?v=HbvYeLxMKN8"
+}
+else if Command = doit ; JUST DO IT!!!
+{
+    gui_destroy()
+    SendRaw % "https://media.giphy.com/media/UqZ4imFIoljlr5O2sM/giphy.gif"
+}
 ;-------------------------------------------------------------------------------
 ;;; OPEN FOLDERS ;;;
 ;-------------------------------------------------------------------------------
-else if Command = down ; Downloads
-{
-    gui_destroy()
-    run C:\Users\%A_Username%\Downloads
-}
 else if Command = ss ; Screenshots folder
 {
     gui_destroy()
@@ -186,6 +191,12 @@ else if Command = rec ; Recycle Bin
 {
     gui_destroy()
     Run ::{645FF040-5081-101B-9F08-00AA002F954E}
+}
+else if Command = wall
+{
+    gui_destroy()
+    Run powershell.exe -NonInteractive -NoLogo -WindowStyle Hidden -ExecutionPolicy Bypass -File "Miscellaneous/Find_current_wallpaper.ps1"
+
 }
 ;-------------------------------------------------------------------------------
 ;;; MISCELLANEOUS ;;;
