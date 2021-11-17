@@ -94,13 +94,18 @@ else if Command = url ; Open an URL from the clipboard (naive - will try to run 
     gui_destroy()
     run % Trim(ClipBoard)
 }
-else if Command = morning ; Morning routine
+else if Command = work
 {
     gui_destroy()
-    run "https://mail.tbp.land"
-    run "https://forum.duplicacy.com"
-    run "https://meta.discourse.org/"
-    run "https://github.com/"
+    run C:/all/Vivaldi/Application/vivaldi.exe --profile-directory="Profile 3"
+    ; run C:/all/Microsoft Edge Portable/Edge Stable x64 Launcher.exe --profile-directory="Profile 3"
+    run "C:/Users/crist/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/JetBrains Toolbox/JetBrains Toolbox.lnk"
+    run "C:/Users/crist/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Microsoft Teams.lnk"
+    run "C:/ProgramData/Microsoft/Windows/Start Menu/Docker Desktop.lnk"
+    run C:/all/Vivaldi/Application/vivaldi.exe --profile-directory="Profile 7"
+    ; run C:/all/Microsoft Edge Portable/Edge Stable x64 Launcher.exe --profile-directory="Profile 7"
+    run "C:/Users/crist/AppData/Local/Microsoft/OneDrive/OneDrive.exe"
+    ; run "C:/Program Files/NVIDIA Corporation/NVIDIA Broadcast/NVIDIA Broadcast.exe"
 }
 else if Command = discord ; Discord
 {
@@ -128,6 +133,7 @@ else if Command = ks
     gui_destroy()
     run  taskkill /f /IM Skype*
 }
+
 
 ;-------------------------------------------------------------------------------
 ;;; INTERACT WITH THIS AHK SCRIPT ;;;
