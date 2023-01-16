@@ -7,7 +7,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance, force
 #MaxHotkeysPerInterval 500
 #WinActivateForce
-#InstallKeybdHook
 
 ;-------------------------------------------------------
 ; AUTO EXECUTE SECTION FOR INCLUDED SCRIPTS

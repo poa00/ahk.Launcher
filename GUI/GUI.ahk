@@ -36,8 +36,7 @@ gui_autoexecute:
 ;-------------------------------------------------------------------------------
 ; LAUNCH GUI
 ;-------------------------------------------------------------------------------
-Tab & LWin::
-LWin & Tab::
+^!+l:: ; launching this from the other AHK script which catches everything related to win key
 gui_spawn:
     if gui_state != closed
     {
