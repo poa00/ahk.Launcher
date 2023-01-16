@@ -7,7 +7,7 @@
 
 ; Write your own AHK commands in this file to be recognized by the GUI. Take inspiration from the samples provided here.
 
-st := "C:\all\Sublime Text 3\sublime_text.exe"
+st := "D:\all\all\Sublime Text 3\sublime_text.exe"
 
 ; this is just a dummy condition, so that everything else starts with "else if Command ="
 if 1 = 2
@@ -97,15 +97,22 @@ else if Command = url ; Open an URL from the clipboard (naive - will try to run 
 else if Command = work
 {
     gui_destroy()
-    run C:/all/Vivaldi/Application/vivaldi.exe --profile-directory="Profile 3"
-    ; run C:/all/Microsoft Edge Portable/Edge Stable x64 Launcher.exe --profile-directory="Profile 3"
-    run "C:/Users/crist/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/JetBrains Toolbox/JetBrains Toolbox.lnk"
-    run "C:/Users/crist/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Microsoft Teams.lnk"
-    run "C:/ProgramData/Microsoft/Windows/Start Menu/Docker Desktop.lnk"
-    run C:/all/Vivaldi/Application/vivaldi.exe --profile-directory="Profile 7"
-    ; run C:/all/Microsoft Edge Portable/Edge Stable x64 Launcher.exe --profile-directory="Profile 7"
-    run "C:/Users/crist/AppData/Local/Microsoft/OneDrive/OneDrive.exe"
-    ; run "C:/Program Files/NVIDIA Corporation/NVIDIA Broadcast/NVIDIA Broadcast.exe"
+     run D:/all/all/Vivaldi/Application/vivaldi.exe --profile-directory="Profile 3"
+     ; run D:/all/all/Microsoft Edge Portable/Edge Stable x64 Launcher.exe --profile-directory="Profile 3"
+     run "C:/Users/TheBestPessimist/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/JetBrains Toolbox/JetBrains Toolbox.lnk"
+     run "C:/Users/TheBestPessimist/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Feces.lnk" "-disable-features=HardwareMediaKeyHandling"
+     run "C:/ProgramData/Microsoft/Windows/Start Menu/Docker Desktop.lnk"
+     run D:/all/all/Vivaldi/Application/vivaldi.exe --profile-directory="Profile 7"
+     ; run D:/all/all/Microsoft Edge Portable/Edge Stable x64 Launcher.exe --profile-directory="Profile 7"
+     ; run "C:/Users/TheBestPessimist/AppData/Local/Microsoft/OneDrive/OneDrive.exe"
+     ; run "C:/Program Files/NVIDIA Corporation/NVIDIA Broadcast/NVIDIA Broadcast.exe"
+}
+else if Command = feces
+{
+    gui_destroy()
+;    Run powershell.exe -NonInteractive -NoLogo -WindowStyle Hidden -ExecutionPolicy Bypass -File "Miscellaneous/Find_current_wallpaper.ps1"
+
+    Run powershell.exe -NonInteractive -NoExit -ExecutionPolicy Bypass -File "Miscellaneous/feces.ps1"
 }
 else if Command = discord ; Discord
 {
@@ -185,7 +192,7 @@ else if Command = doit ; JUST DO IT!!!
 else if Command = ss ; Screenshots folder
 {
     gui_destroy()
-    run C:\all\ShareX-portable\ShareX\Screenshots
+    run D:\all\all\ShareX-portable\ShareX\Screenshots
 }
 else if Command = rec ; Recycle Bin
 {
