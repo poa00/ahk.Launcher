@@ -97,15 +97,18 @@ else if Command = url ; Open an URL from the clipboard (naive - will try to run 
 else if Command = work
 {
     gui_destroy()
-     run D:/all/all/Vivaldi/Application/vivaldi.exe --profile-directory="Profile 3"
-     ; run D:/all/all/Microsoft Edge Portable/Edge Stable x64 Launcher.exe --profile-directory="Profile 3"
-     run "C:/Users/TheBestPessimist/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/JetBrains Toolbox/JetBrains Toolbox.lnk"
-     run "C:/Users/TheBestPessimist/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Feces.lnk" "-disable-features=HardwareMediaKeyHandling"
-     run "C:/ProgramData/Microsoft/Windows/Start Menu/Docker Desktop.lnk"
-     run D:/all/all/Vivaldi/Application/vivaldi.exe --profile-directory="Profile 7"
-     ; run D:/all/all/Microsoft Edge Portable/Edge Stable x64 Launcher.exe --profile-directory="Profile 7"
-     ; run "C:/Users/TheBestPessimist/AppData/Local/Microsoft/OneDrive/OneDrive.exe"
-     ; run "C:/Program Files/NVIDIA Corporation/NVIDIA Broadcast/NVIDIA Broadcast.exe"
+
+    ; windows fucking scheduler is fucking FUCKED, so best alternative for a semi-decent backup is running this here
+    run pwsh -file "C:\duplicacy-repositories\tbp-flow\.duplicacy\duplicacy-utils\backup.ps1"
+
+    run "C:/Users/TheBestPessimist/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/JetBrains Toolbox/JetBrains Toolbox.lnk"
+    run "C:/ProgramData/Microsoft/Windows/Start Menu/Docker Desktop.lnk"
+    run D:/all/all/Vivaldi/Application/vivaldi.exe --profile-directory="Profile 3"
+    sleep 4000
+    run D:/all/all/Vivaldi/Application/vivaldi.exe --profile-directory="Profile 7"
+    sleep 4000
+    run D:\all\all\Vivaldi\Application\vivaldi.exe --profile-directory="Profile 9"
+    ; run "C:/Users/TheBestPessimist/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Feces.lnk" "-disable-features=HardwareMediaKeyHandling"
 }
 else if Command = feces
 {
